@@ -296,7 +296,6 @@ app.post('/player/growid/login/validate', (req, res) => {
         res.status(405).end(`Method ${req.method} Not Allowed`);
     }
     const { growId, password, _token } = req.body
-    console.log(req.body);
     if (!growId || !password || _token === undefined) {
         res.status(400).json({ message: 'All fields are required' });
     }
