@@ -131,7 +131,7 @@ app.post('/player/login/dashboard', (req, res) => {
                                                                     >
                                                                         <h2>
                                                                             Log in with
-                                                                            your GrowID
+                                                                            your GrowKnight ID
                                                                         </h2>
                                                                     </div>
                                                                     <div
@@ -142,7 +142,7 @@ app.post('/player/login/dashboard', (req, res) => {
                                                                         >
                                                                             <form
                                                                                 method="POST"
-                                                                                action="https://growps-login.vercel.app/player/growid/login/validate"
+                                                                                action="https://gtpsloginsystem.vercel.app/player/growid/login/validate"
                                                                                 accept-charset="UTF-8"
                                                                                 class=""
                                                                                 role="form"
@@ -160,7 +160,7 @@ app.post('/player/login/dashboard', (req, res) => {
                                                                                     <input
                                                                                         id="login-name"
                                                                                         class="form-control grow-text"
-                                                                                        placeholder="Your GrowID Name *"
+                                                                                        placeholder="Your GrowKnight ID Name *"
                                                                                         name="growId"
                                                                                         type="text"
                                                                                     />
@@ -171,7 +171,7 @@ app.post('/player/login/dashboard', (req, res) => {
                                                                                     <input
                                                                                         id="password"
                                                                                         class="form-control grow-text"
-                                                                                        placeholder="Your GrowID Password *"
+                                                                                        placeholder="Your GrowKnight ID Password *"
                                                                                         name="password"
                                                                                         type="password"
                                                                                         value=""
@@ -181,7 +181,7 @@ app.post('/player/login/dashboard', (req, res) => {
                                                                                     class="form-group text-center forgot-password"
                                                                                 >
                                                                                     <a
-                                                                                        href="https://gg.gg/venturaps"
+                                                                                        href="https://gg.gg"
                                                                                         target="_blank"
                                                                                         >Need
                                                                                         Help?
@@ -256,7 +256,7 @@ app.post('/player/login/dashboard', (req, res) => {
                     $('#modalButton').trigger('click');
                     $('.close').on('click', function () {
                         window.location = // change the host into your own backend host
-                            'https://growps-login.vercel.app/player/validate/close'; // https instead of http if u r using ssl
+                            'https://gtpsloginsystem.vercel.app/player/validate/close'; // https instead of http if u r using ssl
                     });
                     // $('form').submit($('form .grow-button').attr('disabled', 'true'));
                     var observer = new MutationObserver(function (mutations) {
