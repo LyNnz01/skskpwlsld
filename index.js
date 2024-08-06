@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.post('/player/growid/checktoken', (req, res) => {
     const { refreshToken, clientData } = req.body;
-    const token = `refreshToken=${refreshToken}&clientData=${clientData}`;
+    const token = `refreshToken=${refreshToken}&clientData=${Buffer.from(clientData).toString('base64')}`;
     res.send(
       JSON.stringify({
         status: "success",
