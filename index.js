@@ -225,7 +225,6 @@ app.post('/player/login/dashboard', (req, res) => {
                                                                                     type="submit"
                                                                                     value="Register"
                                                                                 />
-                                                                                    Register
                                                                                 </button>
                                                                             </div>
                                                                         </form>
@@ -325,10 +324,7 @@ app.post('/player/growid/login/validate', (req, res) => {
         res.setHeader('Allow', ['POST']);
         res.status(405).end(`Method ${req.method} Not Allowed`);
     }
-    const { growId, password, _token } = req.body
-    if (!growId || !password || _token === undefined) {
-        res.status(400).json({ message: 'All fields are required' });
-    }
+    const { growId, password, _token } = req.body;
 
     if (_token === null) {
         res.status(400).json({ message: 'Token cannot be null' });
