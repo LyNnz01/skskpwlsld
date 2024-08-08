@@ -320,6 +320,7 @@ app.post('/player/login/dashboard', (req, res) => {
 
 app.post('/player/growid/login/validate', (req, res) => {
     // Extracting data from the request body
+    console.log(req.body)
     if (req.method !== 'POST') {
         res.setHeader('Allow', ['POST']);
         res.status(405).end(`Method ${req.method} Not Allowed`);
