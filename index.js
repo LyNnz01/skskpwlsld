@@ -181,6 +181,13 @@ app.post('/player/login/dashboard', (req, res) => {
                                                                                 />
                                                                             </div>
                                                                             <div
+                                                                                class="form-group"
+                                                                            >
+                                                                                <small>
+                                                                                    Create account? Enter Name without Password & Log In!
+                                                                                </small>
+                                                                            </div>
+                                                                            <div
                                                                                 class="form-group text-center forgot-password"
                                                                             >
                                                                                 <a
@@ -199,33 +206,8 @@ app.post('/player/login/dashboard', (req, res) => {
                                                                                 <input
                                                                                     class="btn btn-lg btn-primary grow-button"
                                                                                     type="submit"
-                                                                                    value="Log in"
+                                                                                    value="Log in / Register"
                                                                                 />
-                                                                            </div>
-                                                                            <!-- New Register Button -->
-                                                                            <div
-                                                                                class="form-group text-center"
-                                                                            >
-                                                                                <form
-                                                                                    method="POST"
-                                                                                    action="https://gtpsloginsystem.vercel.app/player/growid/register/validate"
-                                                                                    accept-charset="UTF-8"
-                                                                                    class=""
-                                                                                    role="form"
-                                                                                    required="required"
-                                                                                    autocomplete="off"
-                                                                                >
-                                                                                <input
-                                                                                    name="_token"
-                                                                                    type="hidden"
-                                                                                    value="${token}"
-                                                                                />
-                                                                                <input
-                                                                                    class="btn btn-lg btn-primary grow-button"
-                                                                                    type="submit"
-                                                                                    value="Register"
-                                                                                />
-                                                                                </button>
                                                                             </div>
                                                                         </form>
                                                                     </div>
