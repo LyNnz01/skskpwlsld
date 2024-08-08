@@ -34,7 +34,7 @@ app.post('/player/growid/checktoken', (req, res) => {
         accountType: "growtopia"
       })
     );
-    console.log(token)
+    console.log(clientData)
 });
 
 app.post('/player/login/dashboard', (req, res) => {
