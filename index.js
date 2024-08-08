@@ -22,6 +22,7 @@ app.use(express.json());
 
 app.post('/player/growid/checktoken', (req, res) => {
     const { refreshToken, clientData } = req.body;
+    console.log(req.body)
     const decodeRefreshToken = Buffer.from(refreshToken, 'base64').toString('utf-8');
     const token = Buffer.from(decodeRefreshToken.replace(/(_token=)[^&]*/, `$1${Buffer.from(clientData).toString('base64')}`)).toString('base64');
     //const token = `refreshToken=${refreshToken}&clientData=${Buffer.from(clientData).toString('base64')}`;
@@ -34,7 +35,6 @@ app.post('/player/growid/checktoken', (req, res) => {
         accountType: "growtopia"
       })
     );
-    console.log(refreshToken)
 });
 
 app.post('/player/login/dashboard', (req, res) => {
