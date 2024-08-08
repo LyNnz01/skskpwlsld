@@ -308,7 +308,9 @@ app.post('/player/growid/login/validate', (req, res) => {
         res.status(405).end(`Method ${req.method} Not Allowed`);
     }
     const { growId, password, _token } = req.body;
-
+    if (!growId) {
+        res.status(400).json({ message: 'Your GrowID cannot be empty.' });
+    }
     if (_token === null) {
         res.status(400).json({ message: 'Token cannot be null' });
     }
