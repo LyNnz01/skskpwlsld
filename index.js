@@ -27,7 +27,7 @@ app.post('/player/growid/checktoken', (req, res) => {
       JSON.stringify({
         status: "success",
         message: "Account Validated.",
-        token,
+        token: token,
         url: "",
         accountType: "growtopia"
       })
@@ -311,7 +311,7 @@ app.post('/player/growid/login/validate', (req, res) => {
       JSON.stringify({
         status: "success",
         message: "Account Validated.",
-        token,
+        token: token,
         url: "",
         accountType: "growtopia"
       })
